@@ -92,8 +92,8 @@ while ($row = mysqli_fetch_assoc($scheduleRun)) {
 </head>
 <body>
 <header>
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid ms-4">
             <a class="navbar-brand logo" href="#home">EduVate</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -101,18 +101,36 @@ while ($row = mysqli_fetch_assoc($scheduleRun)) {
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-4">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="home.php">Home</a>
+                        <a class="nav-link" aria-current="page" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="profile.php">Profile</a>
+                        <a class="nav-link" aria-current="page" href="#aboutus-container">AboutUs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="finalReport.php">Marks</a>
+                        <a class="nav-link" aria-current="page" href="#events">Events</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="Profile.php#classes">Subjects</a>
+                        <a class="nav-link" aria-current="page" href="#contactus">ContactUs</a>
                     </li>
+                    <?php if(isset($_SESSION['StudentID'])): ?>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="Profile.php">Profile</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="FinalReport.php">Marks</a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="Profile.php#classes">Subjects</a>
+                        </li>
+                    <?php endif; ?>
                 </ul>
+                <?php if(isset($_SESSION['StudentID'])): ?>
+                    <form method="post">
+                        <button type="submit" name="logout" class="btn btn-outline-warning ms-3 me-4 ">Logout</button>
+                    </form>
+                <?php else: ?>
+                    <button type="button" class="btn btn-outline-warning ms-3 me-4 "><a href="login.php">Login</a></button>
+                <?php endif; ?>
             </div>
         </div>
     </nav>
@@ -206,68 +224,7 @@ while ($row = mysqli_fetch_assoc($scheduleRun)) {
 
         </div>
         
-        
-        
-        
-        
-        
-        <!-- <div class="down d-flex row ">
-            <h1 class="text-3xl font-bold text-center mt-4 mb-4">School Schedule</h1>
-            <table class="min-w-full bg-body-secondary rounded-lg shadow-md ">
-                <thead>
-                    <tr class="topraw">
-                        <th class="py-2 px-4 border-b-2 border-gray-200 bg-gray-100 text-left text-sm font-semibold text-white text-center">Time</th>
-                        <th class="py-2 px-4 border-b-2 border-gray-200 bg-gray-100 text-left text-sm font-semibold text-white">sunday</th>
-                        <th class="py-2 px-4 border-b-2 border-gray-200 bg-gray-100 text-left text-sm font-semibold text-white">Monday</th>
-                        <th class="py-2 px-4 border-b-2 border-gray-200 bg-gray-100 text-left text-sm font-semibold text-white">Tuesday</th>
-                        <th class="py-2 px-4 border-b-2 border-gray-200 bg-gray-100 text-left text-sm font-semibold text-white">Wednsday</th>
-                        <th class="py-2 px-4 border-b-2 border-gray-200 bg-gray-100 text-left text-sm font-semibold text-white">Thursday</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="py-2 px-4 border-b border-gray-200 topraw text-white">8:00 AM - 9:00 AM</td>
-                        <td class="py-2 px-4 border-b border-gray-200">Math</td>
-                        <td class="py-2 px-4 border-b border-gray-200">Math</td>
-                        <td class="py-2 px-4 border-b border-gray-200">Math</td>
-                        <td class="py-2 px-4 border-b border-gray-200">Math</td>
-                        <td class="py-2 px-4 border-b border-gray-200">Math</td>
-                    </tr>
-                    <tr>
-                        <td class="py-2 px-4 border-b border-gray-200 topraw text-white">9:00 AM - 10:00 AM</td>
-                        <td class="py-2 px-4 border-b border-gray-200">English</td>
-                        <td class="py-2 px-4 border-b border-gray-200">English</td>
-                        <td class="py-2 px-4 border-b border-gray-200">English</td>
-                        <td class="py-2 px-4 border-b border-gray-200">English</td>
-                        <td class="py-2 px-4 border-b border-gray-200">English</td>
-                    </tr>
-                    <tr>
-                        <td class="py-2 px-4 border-b border-gray-200 topraw text-white">10:00 AM - 11:00 AM</td>
-                        <td class="py-2 px-4 border-b border-gray-200">Science</td>
-                        <td class="py-2 px-4 border-b border-gray-200">Science</td>
-                        <td class="py-2 px-4 border-b border-gray-200">Science</td>
-                        <td class="py-2 px-4 border-b border-gray-200">Science</td>
-                        <td class="py-2 px-4 border-b border-gray-200">Science</td>
-                    </tr>
-                    <tr>
-                        <td class="py-2 px-4 border-b border-gray-200 topraw text-white">11:00 AM - 12:00 PM</td>
-                        <td class="py-2 px-4 border-b border-gray-200">History</td>
-                        <td class="py-2 px-4 border-b border-gray-200">History</td>
-                        <td class="py-2 px-4 border-b border-gray-200">History</td>
-                        <td class="py-2 px-4 border-b border-gray-200">History</td>
-                        <td class="py-2 px-4 border-b border-gray-200">History</td>
-                    </tr>
-                    <tr>
-                        <td class="py-2 px-4 border-b border-gray-200 topraw text-white">1:00 PM - 2:00 PM</td>
-                        <td class="py-2 px-4 border-b border-gray-200">Physical Education</td>
-                        <td class="py-2 px-4 border-b border-gray-200">Art</td>
-                        <td class="py-2 px-4 border-b border-gray-200">Music</td>
-                        <td class="py-2 px-4 border-b border-gray-200">Computer Science</td>
-                        <td class="py-2 px-4 border-b border-gray-200">Physical Education</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div> -->
+       
 
 <!-- schedule          ========================================================= -->
 <h1>My Weekly Class Schedule</h1>            
@@ -334,11 +291,11 @@ while ($row = mysqli_fetch_assoc($scheduleRun)) {
    <div class="row d-flex justify-content-evenly   "> 
 
    <?php foreach ($run as $card) { ?>
-    <div class="card text-center mb-3 " style="width: 14rem; height: 10rem;">
+    <div class="card text-center bg-light mb-3 " style="width: 14rem; height: 10rem;">
         <div class="card-body">
             <h5 class="card-title"><?php echo $card['SubjectName'] ?></h5>
             <p class="card-text">Teacher:  <?php echo $card['TeacherName'] ?></p>
-            <a href="SubjDetails.php?SubjectID=<?php echo $card['SubjectID'] ?>&TeacherID=<?php echo $card['TeacherID'] ?>&ClassID=<?php echo $classId ?>&GradeID=<?php echo $grade ?>"  class="btn rounded-4">See details</a>
+            <a href="SubjDetails.php?SubjectID=<?php echo $card['SubjectID'] ?>&TeacherID=<?php echo $card['TeacherID'] ?>&ClassID=<?php echo $classId ?>&GradeID=<?php echo $grade ?>"  class=" see btn rounded-4"> See details</a>
         </div>
     </div>
     <?php } ?>
