@@ -260,7 +260,8 @@ $classAvg = mysqli_fetch_assoc($classAvgResult)['class_avg'];
 </head>
 <body class="bg-light">
 
-    <!-- start navbar -->
+   <!-- start navbar -->
+
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid ms-4">
             <a class="navbar-brand logo" href="#home">EduVate</a>
@@ -270,23 +271,23 @@ $classAvg = mysqli_fetch_assoc($classAvgResult)['class_avg'];
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-4">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#home">Home</a>
+                        <a class="nav-link" aria-current="page" href="home.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#aboutus-container">AboutUs</a>
+                        <a class="nav-link" aria-current="page" href="home.php#aboutus-container">AboutUs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#events">Events</a>
+                        <a class="nav-link" aria-current="page" href="home.php#events">Events</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#contactus">ContactUs</a>
+                        <a class="nav-link" aria-current="page" href="home.php#contactus">ContactUs</a>
                     </li>
                     <?php if(isset($_SESSION['StudentID'])): ?>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="Profile.php">Profile</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="FinalReport.php">Report</a>
+                            <a class="nav-link" aria-current="page" href="FinalReport.php">Marks</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="Profile.php#classes">Subjects</a>
