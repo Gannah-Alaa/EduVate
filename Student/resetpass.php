@@ -72,7 +72,7 @@ if(isset($_POST['submit'])){
     <link rel="stylesheet" href="./css/resetpass.css">
     <script src="./js/bootstrap.bundle.min.js"></script>
 </head>
-<body>
+<body class="bg-light">
 
     <div class="container d-flex justify-content-center align-items-center vh-100 ">
         <div class="card" id="passwordChangeCard">
@@ -96,8 +96,10 @@ if(isset($_POST['submit'])){
                     <label for="confirmnewPassword">Confirm New password</label>
                     <input type="password" name="confirm_password" class="form-control" id="confirmnewPassword"  required>
                 </div>
-                <div class="d-flex justify-content-center">
-                    <button type="submit" name="submit" class="btn rounded-4 mt-3">Change Password</button>
+                
+                <div class="d-grid gap-2">
+                    <button type="submit" name="submit" class="btn btn-primary">Reset Password</button>
+                    <a href="Profile.php" class="btn btn-secondary">Back to Profile</a>
                 </div>
                 <!-- <div id="successMessage" style="display: none; background-color: #d4edda; color: #155724; padding: 15px; border: 2px solid #c3e6cb; border-radius: 5px; margin-top: 20px;">
                     Your password has been changed successfully. You can now log in with your new password.
