@@ -1,4 +1,4 @@
-.container{
+/* .container{
     min-height: 100vh;
 }
 .editp{
@@ -17,7 +17,34 @@
     width: 50%;
     position: relative;
     left: 25%;
+} */
+
+
+.btn-warning {
+    border: none;
 }
+.btn-warning:hover{
+    background-color: #fcc120;
+    color: #0C3B2E;
+}
+.btn{
+    border: none;
+    color: #0C3B2E; ;
+    background-color: #FFBA00;
+    
+}
+
+.btn:hover{
+    background-color: #fdc11c;
+    color: #0C3B2E;
+
+}
+
+.card-header{
+    background-color: #0C3B2E;
+    color: #FFBA00;
+}
+
 
 @media screen and  (max-width: 1000px){
     .editp{
