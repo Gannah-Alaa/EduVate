@@ -3,7 +3,7 @@
 }
 
 .logo{
-    font-size: 30px;
+    font-size: 2.5rem;
     font-weight: 500;
 }
 
@@ -16,11 +16,17 @@
 
 
 .btn{
-    border-color: black ;
+    color: #0C3B2E;
     background-color: #FFBA00;
-    
+    transition: 0.5s;
 }
 
+.btn:hover{
+    background-color: #f8c129;
+    color: #0C3B2E;
+    transform: translateY(-5px);
+
+}
 
 
 .hover-underline {
