@@ -1,0 +1,30 @@
+.container{
+    min-height: 100vh;
+}
+.editp{
+    background-color: #0c3b2e;
+    border-radius: 5px;
+    color: #fff;
+    line-height: 35px;
+    width: 75%;
+}
+
+.inputs{
+    width: 50%;
+}
+
+.submit button{
+    width: 50%;
+    position: relative;
+    left: 25%;
+}
+
+@media screen and  (max-width: 1000px){
+    .editp{
+        width: 100%;
+    }
+    .inputs{
+        width: 90%;
+    }
+}
+
