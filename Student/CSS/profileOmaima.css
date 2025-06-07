@@ -96,13 +96,17 @@ body {
 
 
 
-.btn{
+.rounded-full{
     background-color:#FFBA00;
+    color: #0C3B2E;
 }
 
 
+
+
 .card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease; 
+    box-shadow: 0.3s ease;
 }
 
 .card:hover {
@@ -145,7 +149,7 @@ h1 {
     color: var(--secondary-color);
     margin: 15px 0;
     font-weight: 600;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .timetable {
@@ -234,7 +238,6 @@ h1 {
 .card {
     width: 250px !important;
     height: 180px !important;
-    margin: 0 !important;
     display: flex;
     flex-direction: column;
     background-color: #fff;
@@ -270,7 +273,7 @@ h1 {
 
 .card .btn {
     background-color: #FFBA00;
-    color: #fff;
+    color: #0C3B2E;
     padding: 0.5rem 1rem;
     text-decoration: none;
     transition: background-color 0.3s ease;
@@ -278,7 +281,7 @@ h1 {
 }
 
 .card .btn:hover {
-    background-color: #e5a800;
+    background-color: #f8c63b;
 }
 
 /* Profile Header Styles */
