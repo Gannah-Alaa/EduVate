@@ -61,7 +61,7 @@ $mail->send();
     
     <script src="./js/bootstrap.bundle.min.js"></script>
 </head>
-<body>
+<body class="bg-light">
 
     <div class="container d-flex justify-content-center align-items-center vh-100">
         <div class="row justify-content-center ">
@@ -87,7 +87,7 @@ $mail->send();
                         <form method="post">
                         <div class="text-center mt-3">
                             <!-- <a href="#" id="resendOtp" name ="resend" class="text-black" onclick="resendOTP()">Resend OTP</a> -->
-                            <button type="submit"  name ="resend" class="text-black" >Resend OTP</button>
+                            <button type="submit"  name ="resend" class="text-black btn w-50 py-2 rounded-4" >Resend OTP</button>
                             </form>
 
                         </div>
