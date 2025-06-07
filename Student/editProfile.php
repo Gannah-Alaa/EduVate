@@ -52,35 +52,37 @@ if(isset($_POST['update'])){
     <title>Edit profile</title>
 </head>
 <body class="bg-light">
-
-    <div class="container d-flex align-items-center justify-content-center">
-    <div class="editp shadow m-auto p-4">
-        <h3 class="text-center">Edit your profile</h3>
-        <div class="inputs m-auto">
-
-            <form action="" method="post" enctype="multipart/form-data">
-            <!-- <label for="name">Name:</label>
-            <input id="name" type="text" class="form-control"> -->
-            <label for="name">Phone number:</label>
-            <input name="phone" id="name" type="text" class="form-control" value="<?php echo $Phone; ?>">
-            <!-- <label for="name">Email:</label>
-            <input name="email"id="name" type="email" class="form-control" value="<?php echo $email; ?>"> -->
-            <label for="name">Address:</label>
-            <input name="address" id="name" type="text" class="form-control" value="<?php echo $address; ?>">
-            <label for="name">Image:</label>
-            <input name="image" type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-            <div class="submit">
-                <button type="submit" name="update" class="btn btn-warning mt-4">DONE <i class="fa-solid fa-right"></i></button>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="text-center">Edit your profile</h3>
+                    </div>
+                    <div class="card-body">
+                        <form action="" method="post" enctype="multipart/form-data">
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone number:</label>
+                                <input name="phone" id="phone" type="text" class="form-control" value="<?php echo $Phone; ?>">
+                            </div>
+                            <div class="mb-3">
+                                <label for="address" class="form-label">Address:</label>
+                                <input name="address" id="address" type="text" class="form-control" value="<?php echo $address; ?>">
+                            </div>
+                            <div class="mb-3">
+                                <label for="image" class="form-label">Image:</label>
+                                <input name="image" type="file" class="form-control" id="image" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button type="submit" name="update" class="btn btn-warning mt-2">DONE <i class="fa-solid fa-right"></i></button>
+                                <a href="profile.php" class="btn btn-secondary">Back to Profile</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
-            </form>
-
         </div>
     </div>
-    </div>
-
-
-
-
     <script src=""></script>
 </body>
 </html>
