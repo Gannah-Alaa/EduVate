@@ -29,7 +29,7 @@ if(isset($_POST['submit'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./fontawesome-free-6.4.0-web/css/all.min.css">
+    <link rel="stylesheet" href="../fontawesome-free-6.4.0-web/css/all.min.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/home.css">
     <title>Home</title>
@@ -48,20 +48,20 @@ if(isset($_POST['submit'])){
                         <a class="nav-link" aria-current="page" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">AbouUs</a>
+                        <a class="nav-link" aria-current="page" href="#aboutus-container">AboutUs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Events</a>
+                        <a class="nav-link" aria-current="page" href="#events">Events</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">ContactUs</a>
+                        <a class="nav-link" aria-current="page" href="#contactus">ContactUs</a>
                     </li>
                     <?php if(isset($_SESSION['StudentID'])): ?>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="Profile.php">Profile</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="FinalReport.php">Marks</a>
+                            <a class="nav-link" aria-current="page" href="FinalReport.php">Report</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="Profile.php#classes">Subjects</a>
@@ -80,7 +80,6 @@ if(isset($_POST['submit'])){
     </nav>
     <!-- end navbar -->
 
-      <!-- end navbar -->
 
       <!-- start landing -->
 
@@ -107,8 +106,7 @@ if(isset($_POST['submit'])){
     <!-- start right part -->
 
     <div class="right-container col-md-4 ">
-        <img src="./img/right side landing pic.jpg" alt="landing pic" class="landing-img shadow"width="400px" >
-        <div class="pic-border shadow"></div>
+<img src="../img/right side landing pic.jpg" alt="landing pic" class="landing-img shadow" width="400px">        <div class="pic-border shadow"></div>
     </div>
 
 </div>
@@ -173,7 +171,7 @@ while ($row = mysqli_fetch_assoc($result)) {
              class="d-block w-100 slide-img"
              style="object-fit:cover; width:100%; height:350px; border-radius:10px;"
              alt="Event Image">
-        <div class="carousel-caption d-sm-block" style="background: rgba(0,0,0,0.6); border-radius: 8px; padding: 1rem;">
+        <div class="carousel-caption d-sm-block" style="background: rgba(1, 29, 1, 0.6); border-radius: 8px; padding: 1rem;">
           <h5 style="color: #fff;"><?php echo htmlspecialchars($new['Title']); ?></h5>
           <p style="color: #fff;"><?php echo htmlspecialchars($new['desc']); ?></p>
         </div>
