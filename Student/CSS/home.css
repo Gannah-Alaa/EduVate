@@ -40,6 +40,16 @@
     color: #ffba00;
 }
 
+.btn-outline-warning a{
+    color: #ffba00;
+    text-decoration: none;
+}
+
+.btn-outline-warning:hover{
+    background-color: transparent;
+}
+
+
 
 .nav-item a{
     color: #ffba00;
