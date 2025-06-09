@@ -20,7 +20,7 @@ if(isset($_POST['addstudent'])){
     $confirmPass=$_POST['confirmPass'];
     $address=$_POST['address'];
     $phone=$_POST['phone'];
-    $busSub=$_POST['bussub'];
+    // $busSub=$_POST['bussub'];
 
     $lowercase=preg_match('@[a-z]@',$pass);
     $uppercase=preg_match('@[A-Z]@',$pass);
@@ -52,17 +52,11 @@ if(isset($_POST['addstudent'])){
     }else{
         $grade=$_POST['grade'];
         $class=$_POST['class'];
-        $busNumber=$_POST['bus'];
+        // $busNumber=$_POST['bus'];
 
-        if($busSub==0){
-            $insert="INSERT INTO `students` VALUES (NULL, '$name' , '$email' , '$hashed_password', '$address', '$phone', 0, NULL, '$grade', '$class', 'studentpp.png')";
+            $insert="INSERT INTO `students` VALUES (NULL, '$name' , '$email' , '$hashed_password', '$address', '$phone', 0, '$grade', '$class', 'studentpp.png')";
             $run_insert=mysqli_query($connect, $insert);
             $success_msg = "Student $name Added Successfully";
-        }else{
-            $insert="INSERT INTO `students` VALUES (NULL, '$name' , '$email' , '$hashed_password', '$address', '$phone', 1, '$busNumber', '$grade', '$class', 'studentpp.png')";
-            $run_insert=mysqli_query($connect, $insert);
-            $success_msg = "Student $name Added Successfully";
-        }
     }
 }
 ?>
