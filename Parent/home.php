@@ -35,10 +35,10 @@ if(isset($_POST['submit'])){
     <title>Home</title>
 </head>
 <body>
-    <!-- start navbar -->
+     <!-- start navbar -->
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid ms-4">
-            <a class="navbar-brand logo" href="#home">EduVate</a>
+            <a class="navbar-brand logo" href="#home"><img src="../img/logo.jpg" width="250px" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -48,13 +48,13 @@ if(isset($_POST['submit'])){
                         <a class="nav-link" aria-current="page" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">AbouUs</a>
+                        <a class="nav-link" aria-current="page" href="#aboutus-container">AbouUs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">Events</a>
+                        <a class="nav-link" aria-current="page" href="#events">Events</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#">ContactUs</a>
+                        <a class="nav-link" aria-current="page" href="#contactus">ContactUs</a>
                     </li>
                     <?php if(isset($_SESSION['ParentID'])): ?>
                         <li class="nav-item">
@@ -77,10 +77,9 @@ if(isset($_POST['submit'])){
                 <?php endif; ?>
             </div>
         </div>
-    </nav>
+    </nav>  <br><br>
     <!-- end navbar -->
 
-      <!-- end navbar -->
 
       <!-- start landing -->
 
