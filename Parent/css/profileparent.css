@@ -1,0 +1,130 @@
+.nav-link{
+    position: relative;
+    color: #ffba00;
+}
+
+.nav-link:hover{
+    color: #ffba00;
+}
+
+.nav-link::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: #ffba00; 
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+    transition:  0.5s ;
+}
+
+.nav-link:hover::after{
+    width: 70%;
+}
+
+
+.navbar{
+    background-color: #0c3b2e;
+    position: fixed;
+    width: 100%;
+    z-index: 20;
+}
+
+.logo{
+    font-size: 40px;
+    font-weight: 800;
+    color: #ffba00;
+}
+
+.logo:hover{
+    color: #ffba00;
+}
+
+
+.nav-item a{
+    color: #ffba00;
+}
+
+.navbar-toggler {
+    border: 2px solid #ffba00;
+    padding: 8px;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 186, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        padding: 20px 0;
+    }
+    
+    .nav-item {
+        margin: 10px 0;
+    }
+    
+    .after-effect a {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .log {
+        margin: 10px auto !important;
+        display: block;
+        background-color: transparent;
+    }
+}
+
+
+body {
+    font-family: 'Inter', sans-serif;
+  }
+  nav a {
+    cursor: pointer;
+  }
+  nav a.active {
+    color: #047857; /* Tailwind green-700 */
+    font-weight: 500;
+    position: relative;
+  }
+  nav a.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #047857;
+  }
+
+
+
+  .rounded-full{
+    background-color:#FFBA00;
+}
+
+.bg-purple{
+    background-color:#FFBA00;
+}
+
+.btnfee{
+    background-color:#0C3B2E;
+    color: white;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-color:#0C3B2E;
+    border-width: 0.5px;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card */
+    box-shadow: 0 4px 20px rgba(235, 191, 34, 0.253); /* Add a shadow effect */
+}
+
+.topraw{ 
+    background-color:#0C3B2E;
+
+}
