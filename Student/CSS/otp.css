@@ -1,0 +1,28 @@
+
+
+.card {
+    border-radius: 10px; 
+    box-shadow: 0 4px 20px rgba(100, 81, 13, 0.253);
+}
+
+.card-title {
+    font-weight: bold; 
+}
+
+#otp {
+    text-align: center; 
+}
+
+
+.btn{
+    /* border-color: black ; */
+    background-color: #FFBA00;
+    
+}
+
+.otp-input {
+    width: 50px; 
+    text-align: center; 
+    margin: 0 5px; 
+    font-size: 24px; 
+}
